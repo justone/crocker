@@ -1,3 +1,5 @@
+[![GoDoc](https://godoc.org/github.com/justone/crocker?status.svg)](http://godoc.org/github.com/justone/crocker)
+
 # crocker - Credential Helper Helper
 
 This is a small helper library for integrating with the [Docker Credential
