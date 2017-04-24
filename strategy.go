@@ -52,11 +52,11 @@ func (s StockStrategy) Helper() (string, error) {
 // MemThenStockStrategy is a strategy for finding helpers.
 type MemThenStockStrategy struct{}
 
-// Helper in MemThenStockStrategy checks for the mem (in memory store) helper
-// and then falls back to the StockStrategy.
+// Helper in MemThenStockStrategy checks for the cachemem (in memory store)
+// helper and then falls back to the StockStrategy.
 func (s MemThenStockStrategy) Helper() (string, error) {
-	if binExists(progWith("mem")) {
-		return progWith("mem"), nil
+	if binExists(progWith("cachemem")) {
+		return progWith("cachemem"), nil
 	}
 
 	ss := StockStrategy{}
